@@ -38,10 +38,46 @@ function topFunction() {
 // close hamburger menu when click outside
 window.addEventListener("click", function (event) {
   if (
-    !event.target.matches([".dropdown-icon", ".dropdown-title", "#hamburger"])
+    !event.target.matches([
+      ".dropdown-icon",
+      ".dropdown-title",
+      "#hamburger",
+      ".toggle-circle",
+      ".dark-toggle-container",
+      "#dark-toggle",
+      ".dark-toggle-container",
+      ".dark-toggle-super-container",
+      ".toggle-circle-container",
+    ])
   ) {
     hamburger.classList.remove("hamburger-active");
     navMenu.classList.add("hidden");
     dropdownMenu.classList.add("hidden");
   }
 });
+
+// Dark Mode Toggle
+const darkToggle = document.querySelector("#dark-toggle");
+const html = document.querySelector("html");
+
+darkToggle.addEventListener("click", function () {
+  if (darkToggle.checked) {
+    html.classList.add("dark");
+    localStorage.theme = "dark";
+  } else {
+    html.classList.remove("dark");
+    localStorage.theme = "light";
+  }
+});
+
+// switch toggle position based on mode
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  darkToggle.checked = true;
+} else {
+  darkToggle.checked = false;
+  document.documentElement.classList.remove("dark");
+}
