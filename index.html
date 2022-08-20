@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/js/splidejs/dist/css/splide.min.css" />
     <title>Krisna's Portfolio</title>
   </head>
   <body>
     <!-- Header Start -->
     <header
-      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+      class="absolute top-0 left-0 z-10 flex w-full items-center bg-transparent"
     >
       <div class="container">
-        <div class="flex items-center justify-between relative">
+        <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="font-bold text-lg text-primary block py-6">
+            <a href="#home" class="block py-6 text-lg font-bold text-primary">
               Krisnasantosa
             </a>
           </div>
@@ -24,63 +25,100 @@
               id="hamburger"
               name="humberger"
               type="button"
-              class="block absolute right-4 lg:hidden"
+              class="absolute right-4 block lg:hidden"
             >
               <span
-                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+                class="hamburger-line origin-top-left transition duration-300 ease-in-out"
               ></span>
               <span
                 class="hamburger-line transition duration-300 ease-in-out"
               ></span>
               <span
-                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+                class="hamburger-line origin-bottom-left transition duration-300 ease-in-out"
               ></span>
             </button>
 
             <nav
               id="nav-menu"
-              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
             >
               <ul class="block lg:flex">
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary"
                     >Beranda</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary"
                     >Tentang Saya</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#portfolio"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary"
                     >Portfolio</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#clients"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary"
                     >Clients</a
                   >
                 </li>
+
+                <!-- Dropdown -->
                 <li class="group">
-                  <a
-                    href="#blog"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
-                    >Blog</a
-                  >
+                  <div class="relative">
+                    <div class="flex items-center">
+                      <a
+                        href="#"
+                        class="mx-8 flex py-2 text-base text-dark group-hover:text-primary"
+                        id="dropdown"
+                      >
+                        <span class="dropdown-title">Fitur</span>
+
+                        <div
+                          class="dropdown-icon absolute right-0 top-0 mt-3 mr-3 h-4 w-4"
+                        >
+                          <img
+                            src="dist/img/icons/caretdown.svg"
+                            alt="CaretDown"
+                            class="dropdown-icon"
+                          />
+                        </div>
+                      </a>
+                    </div>
+                    <div
+                      id="dropdown-menu"
+                      class="absolute right-0 z-20 mt-2 hidden w-48 rounded-lg border-l-4 border-primary bg-white py-2 shadow-lg"
+                    >
+                      <a
+                        href="#blog"
+                        class="block px-4 py-2 text-primary hover:bg-primary hover:text-white"
+                      >
+                        <i class="fas fa-user-circle mr-2"></i>
+                        <span>Blog</span>
+                      </a>
+                      <a
+                        href="#testimonials"
+                        class="block px-4 py-2 text-primary hover:bg-primary hover:text-white"
+                      >
+                        <i class="fas fa-user-circle mr-2"></i>
+                        <span>Testimoni</span>
+                      </a>
+                    </div>
+                  </div>
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary"
+                    class="mx-8 flex py-2 text-base text-dark group-hover:text-primary"
                     >Contact</a
                   >
                 </li>
@@ -99,33 +137,33 @@
           <div class="w-full self-center px-4 lg:w-1/2">
             <h1 class="text-base font-semibold text-primary md:text-xl">
               Halo Semua 👋, saya
-              <span class="block font-bold text-dark text-4xl mt-1 lg:text-5xl"
+              <span class="mt-1 block text-4xl font-bold text-dark lg:text-5xl"
                 >Krisna santosa</span
               >
             </h1>
-            <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">
+            <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
               Web Developer &
               <span class="text-dark">Junior Security Analyst</span>
             </h2>
-            <p class="font-medium text-secondary mb-10 leading-relaxed">
-              Belajar web programming itu mudah dan menyenangkan bukan.
-              <span class="text-dark font-bold">bukan!</span>
+            <p class="mb-10 font-medium leading-relaxed text-secondary">
+              Thinker and Problem Solver.
+              <span class="font-bold text-dark">Exactly!</span>
             </p>
             <a
               href="#"
-              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              class="rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg"
               >Hubungi Saya</a
             >
           </div>
           <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="relative mt-10 lg:mt-0 lg:right-0">
+            <div class="relative mt-10 lg:right-0 lg:mt-0">
               <img
                 src="dist/img/krisna.png"
                 alt="Krisna Santosa"
-                class="max-w-full mx-auto"
+                class="mx-auto max-w-full"
               />
               <span
-                class="absolute -bottom-5 -z-10 left-1/2 -translate-x-1/2 md:scale-125"
+                class="absolute -bottom-5 left-1/2 -z-10 -translate-x-1/2 md:scale-125"
               >
                 <svg
                   width="500"
@@ -151,35 +189,35 @@
     <section id="about" class="pt-36 pb-32">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-10 lg:w-1/2">
-            <h4 class="font-bold uppercase text-primary text-lg mb-3">
+          <div class="mb-10 w-full px-4 lg:w-1/2">
+            <h4 class="mb-3 text-lg font-bold uppercase text-primary">
               Tentang Saya
             </h4>
-            <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">
-              Yuk, belajar web programming
+            <h2 class="mb-5 max-w-md text-3xl font-bold text-dark lg:text-4xl">
+              Mari berkenalan dengan saya.
             </h2>
-            <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus
-              aperiam deleniti nesciunt tenetur sapiente maiores! Rerum?
+            <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
+              Seseorang yang memiliki keterampilan dan keahlian di bidang
+              teknologi. Mampu menyelesaikan permasalahan dengan pendekatan yang
+              kreatif dan inovatif.
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
             <h3
-              class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10"
+              class="mb-4 text-2xl font-semibold text-dark lg:pt-10 lg:text-3xl"
             >
               Ikuti saya
             </h3>
-            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, enim
-              libero. Nostrum voluptatibus necessitatibus porro fuga! Labore,
-              temporibus?
+            <p class="mb-6 text-base font-medium text-secondary lg:text-lg">
+              Jangan lupa ikuti saya di media sosial, mari bentuk sinergi untuk
+              mewujudkan cita-cita bangsa!
             </p>
             <div class="flex items-center">
               <!-- Youtube -->
               <a
                 href="https://youtube.com"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-youtube"
               >
                 <svg
                   role="img"
@@ -199,7 +237,7 @@
               <a
                 href="https://instagram.com/krisna.santosa_15"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-instagram"
               >
                 <svg
                   role="img"
@@ -219,7 +257,7 @@
               <a
                 href="https://instagram.com/krisna.santosa_15"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-twitter"
               >
                 <svg
                   role="img"
@@ -239,7 +277,7 @@
               <a
                 href="https://twitch.com/krisna.santosa_15"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-twitch"
               >
                 <svg
                   role="img"
@@ -259,7 +297,7 @@
               <a
                 href="https://linkedin.com/krisna.santosa_15"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-linkedin"
               >
                 <svg
                   role="img"
@@ -279,7 +317,7 @@
               <a
                 href="https://blogger.com/krisna.santosa_15"
                 target="_blank"
-                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-blogger"
               >
                 <svg
                   role="img"
@@ -302,17 +340,17 @@
     <!-- About Section End -->
 
     <!-- Portfolio Section Start -->
-    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+    <section id="portfolio" class="bg-slate-100 pt-36 pb-16">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
             >
               Project Terbaru
             </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary md:text-lg">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit
               officia aliquam at facere neque velit cum! Quos nihil excepturi
               velit.
@@ -322,20 +360,109 @@
 
         <!-- Portfolio 1 Start -->
         <div
-          class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto"
+          class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12"
         >
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative overflow-hidden rounded-md shadow-md">
               <img
                 class="w-full"
                 src="dist/img/portfolio/1.png"
                 alt="Portfolio Web"
               />
+              <!-- overlay for images -->
+              <div
+                class="absolute inset-0 flex h-full items-center justify-center bg-dark opacity-0 transition duration-300 ease-in-out hover:opacity-80"
+              >
+                <div class="p-4">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <!-- Zoom In -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          onclick="zoomImage(this)"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-zoom-in"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                            />
+                            <path
+                              d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Firefox -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-firefox md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              d="M130.22 127.548C130.38 127.558 130.3 127.558 130.22 127.548V127.548ZM481.64 172.898C471.03 147.398 449.56 119.898 432.7 111.168C446.42 138.058 454.37 165.048 457.4 185.168C457.405 185.306 457.422 185.443 457.45 185.578C429.87 116.828 383.098 89.1089 344.9 28.7479C329.908 5.05792 333.976 3.51792 331.82 4.08792L331.7 4.15792C284.99 30.1109 256.365 82.5289 249.12 126.898C232.503 127.771 216.219 131.895 201.19 139.035C199.838 139.649 198.736 140.706 198.066 142.031C197.396 143.356 197.199 144.87 197.506 146.323C197.7 147.162 198.068 147.951 198.586 148.639C199.103 149.327 199.76 149.899 200.512 150.318C201.264 150.737 202.096 150.993 202.954 151.071C203.811 151.148 204.676 151.045 205.491 150.768L206.011 150.558C221.511 143.255 238.408 139.393 255.541 139.238C318.369 138.669 352.698 183.262 363.161 201.528C350.161 192.378 326.811 183.338 304.341 187.248C392.081 231.108 368.541 381.784 246.951 376.448C187.487 373.838 149.881 325.467 146.421 285.648C146.421 285.648 157.671 243.698 227.041 243.698C234.541 243.698 255.971 222.778 256.371 216.698C256.281 214.698 213.836 197.822 197.281 181.518C188.434 172.805 184.229 168.611 180.511 165.458C178.499 163.75 176.392 162.158 174.201 160.688C168.638 141.231 168.399 120.638 173.51 101.058C148.45 112.468 128.96 130.508 114.8 146.428H114.68C105.01 134.178 105.68 93.7779 106.25 85.3479C106.13 84.8179 99.022 89.0159 98.1 89.6579C89.5342 95.7103 81.5528 102.55 74.26 110.088C57.969 126.688 30.128 160.242 18.76 211.318C14.224 231.701 12 255.739 12 263.618C12 398.318 121.21 507.508 255.92 507.508C376.56 507.508 478.939 420.281 496.35 304.888C507.922 228.192 481.64 173.82 481.64 172.898Z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Github -->
+                      <div class="ml-4">
+                        <a
+                          href="https://github.com/KrisnaSantosa15"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-github md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-github"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        href="#"
+                        class="text-sm text-secondary hover:text-primary"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               Portfolio Krisna Santosa
             </h3>
-            <p class="font-medium text-base text-secondary">
+            <p class="text-base font-medium text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptates perferendis nesciunt quasi!
             </p>
@@ -344,17 +471,105 @@
 
           <!-- Portfolio 2 Start -->
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative overflow-hidden rounded-md shadow-md">
               <img
                 class="w-full"
                 src="dist/img/portfolio/2.png"
                 alt="Landing Page"
               />
+              <!-- overlay for images -->
+              <div
+                class="absolute inset-0 flex h-full items-center justify-center bg-dark opacity-0 transition duration-300 ease-in-out hover:opacity-80"
+              >
+                <div class="p-4">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <!-- Zoom In -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-zoom-in"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                            />
+                            <path
+                              d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Firefox -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-firefox md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              d="M130.22 127.548C130.38 127.558 130.3 127.558 130.22 127.548V127.548ZM481.64 172.898C471.03 147.398 449.56 119.898 432.7 111.168C446.42 138.058 454.37 165.048 457.4 185.168C457.405 185.306 457.422 185.443 457.45 185.578C429.87 116.828 383.098 89.1089 344.9 28.7479C329.908 5.05792 333.976 3.51792 331.82 4.08792L331.7 4.15792C284.99 30.1109 256.365 82.5289 249.12 126.898C232.503 127.771 216.219 131.895 201.19 139.035C199.838 139.649 198.736 140.706 198.066 142.031C197.396 143.356 197.199 144.87 197.506 146.323C197.7 147.162 198.068 147.951 198.586 148.639C199.103 149.327 199.76 149.899 200.512 150.318C201.264 150.737 202.096 150.993 202.954 151.071C203.811 151.148 204.676 151.045 205.491 150.768L206.011 150.558C221.511 143.255 238.408 139.393 255.541 139.238C318.369 138.669 352.698 183.262 363.161 201.528C350.161 192.378 326.811 183.338 304.341 187.248C392.081 231.108 368.541 381.784 246.951 376.448C187.487 373.838 149.881 325.467 146.421 285.648C146.421 285.648 157.671 243.698 227.041 243.698C234.541 243.698 255.971 222.778 256.371 216.698C256.281 214.698 213.836 197.822 197.281 181.518C188.434 172.805 184.229 168.611 180.511 165.458C178.499 163.75 176.392 162.158 174.201 160.688C168.638 141.231 168.399 120.638 173.51 101.058C148.45 112.468 128.96 130.508 114.8 146.428H114.68C105.01 134.178 105.68 93.7779 106.25 85.3479C106.13 84.8179 99.022 89.0159 98.1 89.6579C89.5342 95.7103 81.5528 102.55 74.26 110.088C57.969 126.688 30.128 160.242 18.76 211.318C14.224 231.701 12 255.739 12 263.618C12 398.318 121.21 507.508 255.92 507.508C376.56 507.508 478.939 420.281 496.35 304.888C507.922 228.192 481.64 173.82 481.64 172.898Z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Github -->
+                      <div class="ml-4">
+                        <a
+                          href="https://github.com/KrisnaSantosa15"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-github md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-github"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        href="#"
+                        class="text-sm text-secondary hover:text-primary"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               Landing Page
             </h3>
-            <p class="font-medium text-base text-secondary">
+            <p class="text-base font-medium text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptates perferendis nesciunt quasi!
             </p>
@@ -363,17 +578,105 @@
 
           <!-- Portfolio 3 Start -->
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative overflow-hidden rounded-md shadow-md">
               <img
                 class="w-full"
                 src="dist/img/portfolio/3.png"
                 alt="Gas Leaked Detector"
               />
+              <!-- overlay for images -->
+              <div
+                class="absolute inset-0 flex h-full items-center justify-center bg-dark opacity-0 transition duration-300 ease-in-out hover:opacity-80"
+              >
+                <div class="p-4">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <!-- Zoom In -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-zoom-in"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                            />
+                            <path
+                              d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Firefox -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-firefox md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              d="M130.22 127.548C130.38 127.558 130.3 127.558 130.22 127.548V127.548ZM481.64 172.898C471.03 147.398 449.56 119.898 432.7 111.168C446.42 138.058 454.37 165.048 457.4 185.168C457.405 185.306 457.422 185.443 457.45 185.578C429.87 116.828 383.098 89.1089 344.9 28.7479C329.908 5.05792 333.976 3.51792 331.82 4.08792L331.7 4.15792C284.99 30.1109 256.365 82.5289 249.12 126.898C232.503 127.771 216.219 131.895 201.19 139.035C199.838 139.649 198.736 140.706 198.066 142.031C197.396 143.356 197.199 144.87 197.506 146.323C197.7 147.162 198.068 147.951 198.586 148.639C199.103 149.327 199.76 149.899 200.512 150.318C201.264 150.737 202.096 150.993 202.954 151.071C203.811 151.148 204.676 151.045 205.491 150.768L206.011 150.558C221.511 143.255 238.408 139.393 255.541 139.238C318.369 138.669 352.698 183.262 363.161 201.528C350.161 192.378 326.811 183.338 304.341 187.248C392.081 231.108 368.541 381.784 246.951 376.448C187.487 373.838 149.881 325.467 146.421 285.648C146.421 285.648 157.671 243.698 227.041 243.698C234.541 243.698 255.971 222.778 256.371 216.698C256.281 214.698 213.836 197.822 197.281 181.518C188.434 172.805 184.229 168.611 180.511 165.458C178.499 163.75 176.392 162.158 174.201 160.688C168.638 141.231 168.399 120.638 173.51 101.058C148.45 112.468 128.96 130.508 114.8 146.428H114.68C105.01 134.178 105.68 93.7779 106.25 85.3479C106.13 84.8179 99.022 89.0159 98.1 89.6579C89.5342 95.7103 81.5528 102.55 74.26 110.088C57.969 126.688 30.128 160.242 18.76 211.318C14.224 231.701 12 255.739 12 263.618C12 398.318 121.21 507.508 255.92 507.508C376.56 507.508 478.939 420.281 496.35 304.888C507.922 228.192 481.64 173.82 481.64 172.898Z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Github -->
+                      <div class="ml-4">
+                        <a
+                          href="https://github.com/KrisnaSantosa15"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-github md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-github"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        href="#"
+                        class="text-sm text-secondary hover:text-primary"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               Gas Leaked Detector
             </h3>
-            <p class="font-medium text-base text-secondary">
+            <p class="text-base font-medium text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptates perferendis nesciunt quasi!
             </p>
@@ -382,17 +685,105 @@
 
           <!-- Portfolio 4 Start -->
           <div class="mb-12 p-4 md:w-1/2">
-            <div class="rounded-md shadow-md overflow-hidden">
+            <div class="relative overflow-hidden rounded-md shadow-md">
               <img
                 class="w-full"
                 src="dist/img/portfolio/4.png"
                 alt="Open Library"
               />
+              <!-- overlay for images -->
+              <div
+                class="absolute inset-0 flex h-full items-center justify-center bg-dark opacity-0 transition duration-300 ease-in-out hover:opacity-80"
+              >
+                <div class="p-4">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                      <!-- Zoom In -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-white md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-zoom-in"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                            />
+                            <path
+                              d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z"
+                            />
+                            <path
+                              fill-rule="evenodd"
+                              d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Firefox -->
+                      <div class="ml-4">
+                        <a
+                          href="#"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-firefox md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            viewBox="0 0 512 512"
+                          >
+                            <path
+                              d="M130.22 127.548C130.38 127.558 130.3 127.558 130.22 127.548V127.548ZM481.64 172.898C471.03 147.398 449.56 119.898 432.7 111.168C446.42 138.058 454.37 165.048 457.4 185.168C457.405 185.306 457.422 185.443 457.45 185.578C429.87 116.828 383.098 89.1089 344.9 28.7479C329.908 5.05792 333.976 3.51792 331.82 4.08792L331.7 4.15792C284.99 30.1109 256.365 82.5289 249.12 126.898C232.503 127.771 216.219 131.895 201.19 139.035C199.838 139.649 198.736 140.706 198.066 142.031C197.396 143.356 197.199 144.87 197.506 146.323C197.7 147.162 198.068 147.951 198.586 148.639C199.103 149.327 199.76 149.899 200.512 150.318C201.264 150.737 202.096 150.993 202.954 151.071C203.811 151.148 204.676 151.045 205.491 150.768L206.011 150.558C221.511 143.255 238.408 139.393 255.541 139.238C318.369 138.669 352.698 183.262 363.161 201.528C350.161 192.378 326.811 183.338 304.341 187.248C392.081 231.108 368.541 381.784 246.951 376.448C187.487 373.838 149.881 325.467 146.421 285.648C146.421 285.648 157.671 243.698 227.041 243.698C234.541 243.698 255.971 222.778 256.371 216.698C256.281 214.698 213.836 197.822 197.281 181.518C188.434 172.805 184.229 168.611 180.511 165.458C178.499 163.75 176.392 162.158 174.201 160.688C168.638 141.231 168.399 120.638 173.51 101.058C148.45 112.468 128.96 130.508 114.8 146.428H114.68C105.01 134.178 105.68 93.7779 106.25 85.3479C106.13 84.8179 99.022 89.0159 98.1 89.6579C89.5342 95.7103 81.5528 102.55 74.26 110.088C57.969 126.688 30.128 160.242 18.76 211.318C14.224 231.701 12 255.739 12 263.618C12 398.318 121.21 507.508 255.92 507.508C376.56 507.508 478.939 420.281 496.35 304.888C507.922 228.192 481.64 173.82 481.64 172.898Z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+
+                      <!-- Github -->
+                      <div class="ml-4">
+                        <a
+                          href="https://github.com/KrisnaSantosa15"
+                          target="_blank"
+                          class="mr-3 flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-github md:h-16 md:w-16 lg:h-20 lg:w-20"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="30"
+                            height="30"
+                            fill="currentColor"
+                            class="bi bi-github"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="flex items-center">
+                      <a
+                        href="#"
+                        class="text-sm text-secondary hover:text-primary"
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="font-semibold text-xl text-dark mt-5 mb-3">
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark">
               Open Library SMKN 1 Garut
             </h3>
-            <p class="font-medium text-base text-secondary">
+            <p class="text-base font-medium text-secondary">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptates perferendis nesciunt quasi!
             </p>
@@ -404,17 +795,17 @@
     <!-- Portfolio Section End -->
 
     <!-- Clients Section Start -->
-    <section id="clients" class="pt-36 pb-32 bg-slate-700">
+    <section id="clients" class="bg-slate-700 pt-36 pb-32">
       <div class="container">
         <div class="w-full px-4">
-          <div class="mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Clients</h4>
+          <div class="mx-auto mb-16 text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Clients</h4>
             <h2
-              class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="mb-4 text-3xl font-bold text-white sm:text-4xl lg:text-5xl"
             >
               Yang pernah bekerjasama
             </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary md:text-lg">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima,
               quia. Voluptates, fugiat.
             </p>
@@ -426,7 +817,7 @@
             <!-- Client 1 -->
             <a
               href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
               <img src="dist/img/clients/google.svg" alt="Google" />
             </a>
@@ -434,7 +825,7 @@
             <!-- Client 2 -->
             <a
               href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
               <img src="dist/img/clients/gojek.svg" alt="Gojek" />
             </a>
@@ -442,7 +833,7 @@
             <!-- Client 3 -->
             <a
               href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
               <img src="dist/img/clients/tokopedia.svg" alt="Tokopedia" />
             </a>
@@ -450,7 +841,7 @@
             <!-- Client 4 -->
             <a
               href="#"
-              class="max-w-[120px] mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
+              class="mx-4 max-w-[120px] py-4 opacity-60 grayscale transition duration-500 hover:opacity-100 hover:grayscale-0 lg:mx-6 xl:mx-8"
             >
               <img src="dist/img/clients/amazon.svg" alt="Amazon" />
             </a>
@@ -461,17 +852,17 @@
     <!-- Clients Section End -->
 
     <!-- Blog Section Start -->
-    <section id="blog" class="pt-36 pb-32 bg-slate-100">
+    <section id="blog" class="bg-slate-100 pt-36 pb-32">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Blog</h4>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Blog</h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
             >
               Tulisan Terkini
             </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary md:text-lg">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
               voluptatum rerum, blanditiis aspernatur deleniti reprehenderit?
             </p>
@@ -480,25 +871,42 @@
 
         <div class="flex flex-wrap">
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden mb-10">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
               <img
                 src="https://source.unsplash.com/360x200?programming"
                 alt="Programming"
                 class="w-full"
               />
-              <div class="py-8 px-6">
+              <div class="px-6 pt-4">
+                <span
+                  class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #web
+                </span>
+                <span
+                  class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #design
+                </span>
+                <span
+                  class="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #development
+                </span>
+              </div>
+              <div class="px-6 pb-8 pt-3">
                 <a
                   href="#"
-                  class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary"
                   ><h3>Tips Belajar Programming</h3></a
                 >
-                <p class="text-secondary font-medium mb-6 text-base">
+                <p class="mb-6 text-base font-medium text-secondary">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Voluptates perferendis nesciunt quasi!
                 </p>
                 <a
                   href="#"
-                  class="font-medium text-sm text-white bg-primary py-3 px-4 rounded-lg hover:opacity-80"
+                  class="rounded-lg bg-primary py-3 px-4 text-sm font-medium text-white hover:opacity-80"
                   >Baca Selengkapnya</a
                 >
               </div>
@@ -506,25 +914,42 @@
           </div>
 
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden mb-10">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
               <img
                 src="https://source.unsplash.com/360x200?nasa"
                 alt="Nasa"
                 class="w-full"
               />
-              <div class="py-8 px-6">
+              <div class="px-6 pt-4">
+                <span
+                  class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #nasa
+                </span>
+                <span
+                  class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #mars
+                </span>
+                <span
+                  class="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #rocket
+                </span>
+              </div>
+              <div class="px-6 pb-8 pt-3">
                 <a
                   href="#"
-                  class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary"
                   ><h3>Penemuan Nasa</h3></a
                 >
-                <p class="text-secondary font-medium mb-6 text-base">
+                <p class="mb-6 text-base font-medium text-secondary">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Itaque fugit hic nam atque recusandae sapiente!
                 </p>
                 <a
                   href="#"
-                  class="font-medium text-sm text-white bg-primary py-3 px-4 rounded-lg hover:opacity-80"
+                  class="rounded-lg bg-primary py-3 px-4 text-sm font-medium text-white hover:opacity-80"
                   >Baca Selengkapnya</a
                 >
               </div>
@@ -532,26 +957,43 @@
           </div>
 
           <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
-            <div class="bg-white shadow-lg rounded-xl overflow-hidden mb-10">
+            <div class="mb-10 overflow-hidden rounded-xl bg-white shadow-lg">
               <img
                 src="https://source.unsplash.com/360x200?anime"
                 alt="Anime"
                 class="w-full"
               />
-              <div class="py-8 px-6">
+              <div class="px-6 pt-4">
+                <span
+                  class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #anime
+                </span>
+                <span
+                  class="mr-2 mb-2 inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #manga
+                </span>
+                <span
+                  class="inline-block rounded-full bg-gray-200 px-3 py-1 text-sm font-semibold text-gray-700"
+                >
+                  #naruto
+                </span>
+              </div>
+              <div class="px-6 pb-8 pt-3">
                 <a
                   href="#"
-                  class="block mb-3 font-semibold text-xl text-dark hover:text-primary truncate"
+                  class="mb-3 block truncate text-xl font-semibold text-dark hover:text-primary"
                   ><h3>Episode Baru Anime</h3></a
                 >
-                <p class="text-secondary font-medium mb-6 text-base">
+                <p class="mb-6 text-base font-medium text-secondary">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Ducimus in tempora ad harum quisquam quam, sint ratione!
                   Praesentium.
                 </p>
                 <a
                   href="#"
-                  class="font-medium text-sm text-white bg-primary py-3 px-4 rounded-lg hover:opacity-80"
+                  class="rounded-lg bg-primary py-3 px-4 text-sm font-medium text-white hover:opacity-80"
                   >Baca Selengkapnya</a
                 >
               </div>
@@ -562,58 +1004,186 @@
     </section>
     <!-- Blog Section End -->
 
-    <!-- Contact Section Start -->
-    <section id="contact" class="pt-36 pb-32">
+    <!-- Testimonials Section Start -->
+    <section id="testimonials" class="pt-36 pb-32">
       <div class="container">
         <div class="w-full px-4">
-          <div class="max-w-xl mx-auto text-center mb-16">
-            <h4 class="font-semibold text-lg text-primary mb-2">Contact</h4>
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">
+              Testimonials
+            </h4>
             <h2
-              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl"
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
+            >
+              Apa yang mereka katakan
+            </h2>
+            <p class="text-md font-medium text-secondary md:text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              veritatis sit atque ex dolorum vel!
+            </p>
+          </div>
+        </div>
+
+        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <!-- People 1 -->
+              <li class="splide__slide xs:mx-auto sm:mx-auto">
+                <div class="flex flex-col items-center justify-center">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://source.unsplash.com/200x200?people"
+                      alt="People"
+                      class="mb-5 h-20 w-20 rounded-full lg:h-32 lg:w-32"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <p class="mb-2 text-center text-lg font-bold text-dark">
+                      Krisna Santosa
+                    </p>
+                    <p class="text-center text-sm font-medium text-secondary">
+                      "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Impedit ullam commodi accusamus mollitia unde debitis
+                      quia, aspernatur esse accusantium explicabo praesentium
+                      doloribus rem, iure hic delectus, facilis asperiores
+                      incidunt voluptates?"
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- People 2 -->
+              <li class="splide__slide xs:mx-auto sm:mx-auto">
+                <div
+                  class="xs:mx-auto flex flex-col items-center justify-center sm:mx-auto"
+                >
+                  <div class="flex-shrink">
+                    <img
+                      src="https://source.unsplash.com/200x200?people"
+                      alt="People"
+                      class="mb-5 h-20 w-20 rounded-full lg:h-32 lg:w-32"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <p class="mb-2 text-center text-lg font-bold text-dark">
+                      Mira Mustika
+                    </p>
+                    <p class="text-center text-sm font-medium text-secondary">
+                      "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, quidem."
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- People 3 -->
+              <li class="splide__slide xs:mx-auto sm:mx-auto">
+                <div
+                  class="xs:mx-auto flex flex-col items-center justify-center sm:mx-auto"
+                >
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://source.unsplash.com/200x200?people"
+                      alt="People"
+                      class="mb-5 h-20 w-20 rounded-full lg:h-32 lg:w-32"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <p class="mb-2 text-center text-lg font-bold text-dark">
+                      The King
+                    </p>
+                    <p class="text-center text-sm font-medium text-secondary">
+                      "Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Quisquam, quidem."
+                    </p>
+                  </div>
+                </div>
+              </li>
+
+              <!-- People 4 -->
+              <li class="splide__slide xs:mx-auto sm:mx-auto">
+                <div
+                  class="xs:mx-auto flex flex-col items-center justify-center sm:mx-auto"
+                >
+                  <div class="flex-shrink-0">
+                    <img
+                      src="https://source.unsplash.com/200x200?people"
+                      alt="People"
+                      class="mb-5 h-20 w-20 rounded-full lg:h-32 lg:w-32"
+                    />
+                  </div>
+                  <div class="flex-1">
+                    <p class="mb-2 text-center text-lg font-bold text-dark">
+                      John Simons
+                    </p>
+                    <p class="text-center text-sm font-medium text-secondary">
+                      "Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Assumenda perspiciatis odit voluptates nihil, at deleniti
+                      iste impedit corporis deserunt, similique facere esse
+                      expedita!"
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="bg-slate-100 pt-36 pb-32">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-16 max-w-xl text-center">
+            <h4 class="mb-2 text-lg font-semibold text-primary">Contact</h4>
+            <h2
+              class="mb-4 text-3xl font-bold text-dark sm:text-4xl lg:text-5xl"
             >
               Hubungi Saya
             </h2>
-            <p class="font-medium text-md text-secondary md:text-lg">
+            <p class="text-md font-medium text-secondary md:text-lg">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem,
               perferendis?
             </p>
           </div>
 
           <form>
-            <div class="w-full lg:w-2/3 lg:mx-auto">
-              <div class="w-full px-4 mb-8">
+            <div class="w-full lg:mx-auto lg:w-2/3">
+              <div class="mb-8 w-full px-4">
                 <label for="name" class="text-base font-bold text-primary"
                   >Nama</label
                 >
                 <input
                   type="text"
-                  class="w-full px-3 py-2 mb-2 rounded-lg text-base bg-slate-200 text-dark focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                  class="mb-2 w-full rounded-lg bg-slate-200 px-3 py-2 text-base text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   id="name"
                 />
               </div>
-              <div class="w-full px-4 mb-8">
+              <div class="mb-8 w-full px-4">
                 <label for="email" class="text-base font-bold text-primary"
                   >Email</label
                 >
                 <input
                   type="email"
-                  class="w-full px-3 py-2 mb-2 rounded-lg text-base bg-slate-200 text-dark focus:outline-none focus:border-primary focus:ring-primary focus:ring-1"
+                  class="mb-2 w-full rounded-lg bg-slate-200 px-3 py-2 text-base text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   id="email"
                 />
               </div>
-              <div class="w-full px-4 mb-8">
+              <div class="mb-8 w-full px-4">
                 <label for="message" class="text-base font-bold text-primary"
                   >Pesan</label
                 >
                 <textarea
                   type="email"
-                  class="w-full px-3 py-2 mb-2 rounded-lg text-base bg-slate-200 text-dark focus:outline-none focus:border-primary focus:ring-primary focus:ring-1 h-32"
+                  class="mb-2 h-32 w-full rounded-lg bg-slate-200 px-3 py-2 text-base text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   id="email"
                 ></textarea>
               </div>
               <div class="w-full px-4">
                 <button
-                  class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full w-full hover:opacity-80 hover:shadow-lg transition duration-500 lg:w-1/3 mx-auto"
+                  class="mx-auto w-full rounded-full bg-primary py-3 px-8 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg lg:w-1/3"
                 >
                   Hubungi Saya
                 </button>
@@ -629,98 +1199,106 @@
     <footer class="bg-dark pt-24 pb-12">
       <div class="container">
         <div class="flex flex-wrap">
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h2 class="font-bold text-4xl text-white mb-5">Krisna</h2>
-            <h3 class="font-bold text-2xl mb-2">Hubungi Saya</h3>
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h2 class="mb-5 text-4xl font-bold text-white">Krisna</h2>
+            <h3 class="mb-2 text-2xl font-bold">Hubungi Saya</h3>
             <p>krisnasantosa@gmail.com</p>
             <p>Jl.Pasopati Leles Garut</p>
             <p>Garut</p>
           </div>
 
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h3 class="font-semibold text-xl text-white mb-5">
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">
               Kategori Tulisan
             </h3>
             <ul class="text-slate-300">
               <li>
                 <a
                   href="#"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Programming</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Teknologi</a
                 >
               </li>
               <li>
                 <a
                   href="#"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Anime</a
                 >
               </li>
             </ul>
           </div>
 
-          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
-            <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+          <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
+            <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
             <ul class="text-slate-300">
               <li>
                 <a
                   href="#home"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Beranda</a
                 >
               </li>
               <li>
                 <a
                   href="#about"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Tentang Saya</a
                 >
               </li>
               <li>
                 <a
                   href="#portfolio"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Portfolio</a
                 >
               </li>
               <li>
                 <a
                   href="#clients"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Clients</a
                 >
               </li>
               <li>
                 <a
                   href="#blog"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Blog</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="#testimonials"
+                  class="mb-3 inline-block text-base hover:text-primary"
+                  >Testimoni</a
                 >
               </li>
               <li>
                 <a
                   href="#contact"
-                  class="inline-block text-base hover:text-primary mb-3"
+                  class="mb-3 inline-block text-base hover:text-primary"
                   >Contact</a
                 >
               </li>
             </ul>
           </div>
         </div>
-        <div class="w-full pt-10 border-t border-slate-700">
-          <div class="flex items-center justify-center mb-5">
+        <div class="w-full border-t border-slate-700 pt-10">
+          <div class="mb-5 flex items-center justify-center">
             <!-- Youtube -->
             <a
               href="https://youtube.com"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-youtube"
             >
               <svg
                 role="img"
@@ -740,7 +1318,7 @@
             <a
               href="https://instagram.com/krisna.santosa_15"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-instagram"
             >
               <svg
                 role="img"
@@ -760,7 +1338,7 @@
             <a
               href="https://instagram.com/krisna.santosa_15"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-twitter"
             >
               <svg
                 role="img"
@@ -780,7 +1358,7 @@
             <a
               href="https://twitch.com/krisna.santosa_15"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-twitch"
             >
               <svg
                 role="img"
@@ -800,7 +1378,7 @@
             <a
               href="https://linkedin.com/krisna.santosa_15"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-linkedin"
             >
               <svg
                 role="img"
@@ -820,7 +1398,7 @@
             <a
               href="https://blogger.com/krisna.santosa_15"
               target="_blank"
-              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-red-500 transition duration-300 ease-in-out"
+              class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 transition duration-300 ease-in-out hover:border-primary hover:bg-primary hover:text-blogger"
             >
               <svg
                 role="img"
@@ -836,7 +1414,7 @@
               </svg>
             </a>
           </div>
-          <p class="font-medium text-xs text-center text-slate-500">
+          <p class="text-center text-xs font-medium text-slate-500">
             Dibuat dengan <span class="text-pink-500">❤ </span> oleh
             <a
               href="https://instagram.com/krisna.santosa_15"
@@ -851,6 +1429,26 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- Button to Upper the page -->
+    <div class="fixed bottom-0 right-0 mb-4 mr-4">
+      <button
+        class="hidden rounded-full bg-primary py-2 px-4 font-bold text-white hover:bg-primarydark"
+        onclick="topFunction()"
+        id="to-top"
+      >
+        <svg
+          class="h-6 w-6 fill-current"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+      </button>
+    </div>
+
     <script src="dist/js/script.js"></script>
+    <script src="dist/js/splidejs/dist/js/splide.min.js"></script>
+    <script src="dist/js/function.js"></script>
   </body>
 </html>
